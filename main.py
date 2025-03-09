@@ -29,6 +29,12 @@ def main():
         pygame.Surface.fill(screen, pygame.color.Color("black"))
         dt = clock.tick(60) / 1000
         updatables.update(dt)
+
+        for space_rock in asteroids:
+            if space_rock.colliding(player):
+                pygame.quit()
+
+
         for drawable in drawables:
             drawable.draw(screen)
         
