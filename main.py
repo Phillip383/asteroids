@@ -3,6 +3,7 @@ from constants import *
 import player as plyer
 import asteroid
 import asteroidfield
+import projectile
 
 def main():
     pygame.init()
@@ -10,7 +11,9 @@ def main():
     updatables = pygame.sprite.Group()
     drawables = pygame.sprite.Group()
     asteroids = pygame.sprite.Group()
+    projectiles = pygame.sprite.Group()
     
+    projectile.Projectile.containers = (updatables, drawables, projectiles)
     asteroidfield.AsteroidField.containers = (updatables)
     asteroid.Asteroid.containers = (updatables, drawables, asteroids)
     plyer.Player.containers = (updatables, drawables)
