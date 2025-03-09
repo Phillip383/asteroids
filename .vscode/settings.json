@@ -3,5 +3,8 @@
         "circleshape",
         "drawables",
         "updatables"
+    ],
+    "cSpell.ignoreWords": [
+        "asteroidfield"
     ]
 }
