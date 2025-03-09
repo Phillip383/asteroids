@@ -39,7 +39,7 @@ def main():
             if len(projectiles) > 0:
                 for bullet in projectiles:
                     if space_rock.colliding(bullet):
-                        space_rock.kill()
+                        space_rock.split()
                         bullet.kill()
 
 
